@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/ASTEROIDS.dir/link.d CMakeFiles/ASTEROIDS.dir/src/core/main.cpp.o -o /home/john/Dev/gamedev/projects/asteroids/bin/main  /usr/lib/libraylib.so.6.0.0 -lm

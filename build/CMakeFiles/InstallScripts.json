@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/john/Dev/gamedev/projects/asteroids/build/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

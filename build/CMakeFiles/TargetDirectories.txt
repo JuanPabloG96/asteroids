@@ -1,3 +1,0 @@
-/home/john/Dev/gamedev/projects/asteroids/build/CMakeFiles/ASTEROIDS.dir
-/home/john/Dev/gamedev/projects/asteroids/build/CMakeFiles/edit_cache.dir
-/home/john/Dev/gamedev/projects/asteroids/build/CMakeFiles/rebuild_cache.dir
