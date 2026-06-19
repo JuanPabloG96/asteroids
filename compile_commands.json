@@ -1,0 +1,30 @@
+[
+  {
+    "file": "/home/john/Dev/gamedev/projects/asteroids/src/core/main.cpp",
+    "arguments": [
+      "/usr/bin/c++",
+      "-DGRAPHICS_API_OPENGL_33",
+      "-DPLATFORM_DESKTOP",
+      "-DUSE_LIBTYPE_SHARED",
+      "-I/home/john/Dev/gamedev/projects/asteroids/include",
+      "-g",
+      "-std=c++23",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-g",
+      "-O0",
+      "-MD",
+      "-MT",
+      "CMakeFiles/ASTEROIDS.dir/src/core/main.cpp.o",
+      "-MF",
+      "CMakeFiles/ASTEROIDS.dir/src/core/main.cpp.o.d",
+      "-o",
+      "CMakeFiles/ASTEROIDS.dir/src/core/main.cpp.o",
+      "-c",
+      "/home/john/Dev/gamedev/projects/asteroids/src/core/main.cpp"
+    ],
+    "directory": "/home/john/Dev/gamedev/projects/asteroids/build",
+    "output": "CMakeFiles/ASTEROIDS.dir/src/core/main.cpp.o"
+  }
+]
