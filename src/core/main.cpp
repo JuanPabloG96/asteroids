@@ -1,7 +1,8 @@
-#include <iostream>
+#include "core/Game.hpp"
 
 int main()
 {
-    std::cout << "Hola mundo\n";
+    Game asteroids;
+    asteroids.run();
     return 0;
 }
