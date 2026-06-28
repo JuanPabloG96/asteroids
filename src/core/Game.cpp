@@ -15,9 +15,17 @@ void Game::run()
 {
     while (!window.shouldClose())
     {
+        update();
         window.beginDrawing();
-        ClearBackground(BLACK);
-
+        draw();
         window.endDrawing();
     }
+}
+
+void Game::update() { entity_manager.update(); }
+
+void Game::draw()
+{
+    ClearBackground(BLACK);
+    entity_manager.draw();
 }
