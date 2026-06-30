@@ -1,0 +1,13 @@
+#include "managers/EntityManager.hpp"
+
+#include "core/Config.hpp"
+
+EntityManager::EntityManager()
+    : player(
+          {(float)CONFIG::SCREEN_WIDTH / 2, (float)CONFIG::SCREEN_HEIGHT / 2})
+{
+}
+
+void EntityManager::update() { player.update(); }
+
+void EntityManager::draw() { player.draw(); }

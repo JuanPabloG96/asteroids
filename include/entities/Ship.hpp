@@ -6,7 +6,7 @@ class Ship
 {
 private:
     Vector2 position;
-    Vector2 speed;
+    Vector2 velocity;
     float rotation;
     float acceleration;
     float drag;
@@ -14,9 +14,9 @@ private:
 
 public:
     Ship(Vector2 startPos);
-    void Update();
-    void Draw() const;
+    void update();
+    void draw() const;
     Vector2 getPosition() const;
-    Vector2 getSpeed() const;
+    Vector2 getVelocity() const;
     float getRotation() const;
 };

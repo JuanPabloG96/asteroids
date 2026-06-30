@@ -1,20 +1,26 @@
 #pragma once
 #include "raylib.h"
 
+#pragma once
+
+#include "raylib.h"
+
 namespace CONFIG
 {
-inline const int SCREEN_WIDTH = 1920;
-inline const int SCREEN_HEIGHT = 1080;
-inline const char* WINDOW_TITLE = "Asteroids 2026 - raylib";
-inline const int TARGET_FPS = 60;
+inline constexpr int SCREEN_WIDTH = 1440;
+inline constexpr int SCREEN_HEIGHT = 1080;
+inline constexpr int TARGET_FPS = 60;
 
-struct SHIP
+inline constexpr const char* WINDOW_TITLE = "Asteroids 2026 - raylib";
+
+namespace Ship
 {
-    const float speed;
-    const float radius = 20.0f;
-    const float acceleration = 500.0f;
-    const float rotationSpeed = 250.0f;
-    const float drag = 0.98f;
-    const Color color = WHITE;
-};
+inline constexpr float RADIUS = 20.0f;
+inline constexpr float ACCELERATION = 500.0f;
+inline constexpr float ROTATION_SPEED = 250.0f;
+inline constexpr float DRAG = 0.98f;
+inline constexpr float SCALE = 0.5f;
+
+inline constexpr Color COLOR = WHITE;
+} // namespace Ship
 } // namespace CONFIG
