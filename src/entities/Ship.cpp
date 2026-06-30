@@ -10,21 +10,22 @@ Ship::Ship(Vector2 startPos)
 {
 }
 
-void Ship::update() {}
+void Ship::update() { isAccelerating = IsKeyDown(KEY_W); }
 
 void Ship::draw() const
 {
-    const Rectangle& source = SpriteRegions::Ship1;
+    const Rectangle& sprite =
+        isAccelerating ? SpriteRegions::Ship2 : SpriteRegions::Ship1;
 
     Rectangle dest{position.x,
                    position.y,
-                   source.width * CONFIG::Ship::SCALE,
-                   source.height * CONFIG::Ship::SCALE};
+                   sprite.width * CONFIG::Ship::SCALE,
+                   sprite.height * CONFIG::Ship::SCALE};
 
     Vector2 origin{dest.width / 2.0f, dest.height / 2.0f};
 
     DrawTexturePro(Assets::spriteSheet,
-                   source,
+                   sprite,
                    dest,
                    origin,
                    rotation,

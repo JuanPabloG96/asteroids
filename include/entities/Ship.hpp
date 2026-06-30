@@ -12,6 +12,8 @@ private:
     float drag;
     float rotation_speed;
 
+    bool isAccelerating;
+
 public:
     Ship(Vector2 startPos);
     void update();
