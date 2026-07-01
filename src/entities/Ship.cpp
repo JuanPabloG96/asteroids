@@ -5,12 +5,43 @@
 #include "managers/AssetManager.hpp"
 #include "raylib.h"
 
+#include <cmath>
+
 Ship::Ship(Vector2 startPos)
     : position(startPos), velocity{0.0f, 0.0f}, rotation(0.0f)
 {
 }
 
-void Ship::update() { isAccelerating = IsKeyDown(KEY_W); }
+void Ship::update(float dt)
+{
+    isAccelerating = IsKeyDown(KEY_W);
+    rotation_speed = CONFIG::Ship::ROTATION_SPEED;
+
+    Vector2 mouse_position = GetMousePosition();
+
+    float target_rotation =
+        atan2f(mouse_position.y - position.y, mouse_position.x - position.x) *
+        RAD2DEG;
+
+    float delta = target_rotation - rotation;
+
+    while (delta > 180.0f)
+        delta -= 360.0f;
+    while (delta < -180.0f)
+        delta += 360.0f;
+
+    float max_turn = rotation_speed * dt;
+
+    if (fabs(delta) <= max_turn)
+        rotation = target_rotation;
+    else
+        rotation += (delta > 0 ? max_turn : -max_turn);
+
+    rotation = fmodf(rotation, 360.0f);
+
+    if (rotation < 0.0f)
+        rotation += 360.0f;
+}
 
 void Ship::draw() const
 {

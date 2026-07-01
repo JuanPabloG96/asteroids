@@ -9,6 +9,6 @@ private:
 
 public:
     EntityManager();
-    void update();
+    void update(float dt);
     void draw();
 };

@@ -17,7 +17,7 @@ namespace Ship
 {
 inline constexpr float RADIUS = 20.0f;
 inline constexpr float ACCELERATION = 500.0f;
-inline constexpr float ROTATION_SPEED = 250.0f;
+inline constexpr float ROTATION_SPEED = 320.0f;
 inline constexpr float DRAG = 0.98f;
 inline constexpr float SCALE = 0.5f;
 

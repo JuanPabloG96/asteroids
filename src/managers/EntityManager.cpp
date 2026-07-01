@@ -8,6 +8,6 @@ EntityManager::EntityManager()
 {
 }
 
-void EntityManager::update() { player.update(); }
+void EntityManager::update(float dt) { player.update(dt); }
 
 void EntityManager::draw() { player.draw(); }

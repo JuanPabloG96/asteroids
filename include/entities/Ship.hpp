@@ -16,7 +16,7 @@ private:
 
 public:
     Ship(Vector2 startPos);
-    void update();
+    void update(float dt);
     void draw() const;
     Vector2 getPosition() const;
     Vector2 getVelocity() const;

@@ -22,7 +22,11 @@ void Game::run()
     }
 }
 
-void Game::update() { entity_manager.update(); }
+void Game::update()
+{
+    float dt = GetFrameTime();
+    entity_manager.update(dt);
+}
 
 void Game::draw()
 {
